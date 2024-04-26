@@ -105,7 +105,7 @@ const Landing = () => {
         >
           <div className="w-full flex flex-col text-center items-center space-y-5 text-white">
             <img
-              className="w-[90%] md:w-[60%] h-[250px] object-cover"
+              className="w-[90%] md:w-[60%] object-cover"
               src={details?.flags.svg}
               alt=""
             />
