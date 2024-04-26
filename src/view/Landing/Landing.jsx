@@ -65,7 +65,7 @@ const Landing = () => {
                 }}
               >
                 <img
-                  className="w-90 h-full object-cover"
+                  className="w-90 h-[150px] md:h-[250px] object-cover"
                   src={x?.flags.svg}
                   alt={x?.flags.alt}
                 />
@@ -105,7 +105,7 @@ const Landing = () => {
         >
           <div className="w-full flex flex-col text-center items-center space-y-5 text-white">
             <img
-              className="w-[90%] md:w-[60%] object-cover"
+              className="w-[90%] md:w-[60%] h-[250px] object-cover"
               src={details?.flags.svg}
               alt=""
             />
