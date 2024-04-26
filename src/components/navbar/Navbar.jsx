@@ -8,7 +8,7 @@ const Navbar = ({ setSearchParams }) => {
 
   return (
     <>
-      <div className="sticky text-white px-10 flex justify-between items-center top-0 py-3 bg-black w-full">
+      <div className="sticky top-0 z-50 bg-black text-white px-10 py-3 flex justify-between items-center">
         <div
           onClick={() => navigate(APP_PATHS.LANDING)}
           className="z-50 cursor-pointer w-full font-bold"
