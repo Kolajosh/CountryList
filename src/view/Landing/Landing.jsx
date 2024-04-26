@@ -47,8 +47,6 @@ const Landing = () => {
     x?.name.official.toLowerCase().includes(searchParams.toLowerCase())
   );
 
-  console.log(details?.unMember);
-
   return (
     <>
       <div className="relative bg-white text-black font-jarkata w-full h-screen overflow-scroll">
@@ -118,13 +116,13 @@ const Landing = () => {
               <div className="text-md text-center font-regular">
                 <span className="font-bold">Capital: </span>
                 {details?.capital.map((x) => (
-                  <span>{x}</span>
+                  <span key={x}>{x}</span>
                 ))}
               </div>
               <div>
                 <span className="font-bold">Continent: </span>
                 {details?.continents.map((x) => (
-                  <span>{x}</span>
+                  <span key={x}>{x}</span>
                 ))}
               </div>
               <div>
@@ -135,7 +133,7 @@ const Landing = () => {
                 <span className="font-bold">Languages:</span>
                 {Object.keys(details?.languages).map((lang) => (
                   <div key={lang}>
-                    {lang}: {details?.languages[lang]}
+                    ● {lang}: {details?.languages[lang]}
                   </div>
                 ))}
               </div>
@@ -147,7 +145,7 @@ const Landing = () => {
                 <span className="font-bold">All Time Zones</span> <br />
                 <div className="grid text-left grid-cols-3 gap-1">
                   {details?.timezones.map((x) => (
-                    <span>● {x}</span>
+                    <span key={x}>● {x}</span>
                   ))}
                 </div>
               </div>
@@ -155,7 +153,7 @@ const Landing = () => {
                 <span className="font-bold">Currencies:</span>
                 {Object.keys(details?.currencies).map((currency) => (
                   <div key={currency}>
-                    {currency}: {details?.currencies[currency].name} (
+                    ● {currency}: {details?.currencies[currency].name} (
                     {details?.currencies[currency].symbol})
                   </div>
                 ))}
